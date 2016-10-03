@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Бложик</title>
+        <title>Бложек</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -13,17 +13,10 @@
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
             <h1><a href="/">Бложик</a></h1>
-              <div align="right"><h4><a href="/accounts/register/">Зарегистрироваться</a><h4>
-              </div>
-              <div align="right"><h4><a href="/accounts/login/">Войти</a><h4>
-              </div>
-
-
         </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-
                 {% block content %}
                 {% endblock %}
                 </div>

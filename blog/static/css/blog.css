@@ -21,6 +21,10 @@ body {
     margin-left: 40px;
 }
 
+.page-header h4, .page-header h4 a, .page-header h4 a:visited, .page-header h4 a:active {
+    color: #000000;
+    text-decoration: none;
+}
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
 }
