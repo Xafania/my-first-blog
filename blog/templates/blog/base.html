@@ -1,23 +1,40 @@
+
 {% load staticfiles %}
 <html>
     <head>
-        <title>Бложик</title>
+        <title>Улыбнись!</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
+      <div class="topmenu">
+      {% if user.is_anonymous %}
+
+        <div class="topmenu-item" ><h4><a href="/accounts/register/" >Зарегистрироваться</a></h4>
+        </div>
+        <div class="topmenu-item" ><h4><a href="/accounts/login/" >Войти</a><h4>
+        </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <div class="topmenu-item disabled" ><h4><a href="/accounts/register/" >Зарегистрироваться</a></h4>
+        </div>
+        <div class="topmenu-item disabled" ><h4><a href="/accounts/login/" >Войти</a><h4>
+        </div>
+        <div class="topmenu-item last" ><h4><a href="/accounts/logout/" >Выйти</a></h4></div>
+        {% endif %}
+        </div>
         <div class="page-header">
+
+
+
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/">Бложик</a></h1>
-              <div align="right"><h4><a href="/accounts/register/">Зарегистрироваться</a><h4>
-              </div>
-              <div align="right"><h4><a href="/accounts/login/">Войти</a><h4>
-              </div>
 
+            {% endif %}
+
+            <h1><a href="/">Улыбнись!</a></h1>
 
         </div>
         <div class="content container">

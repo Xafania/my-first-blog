@@ -3,7 +3,7 @@ h1 a {
     font-family: 'Lobster';
 }
 body {
-    padding-left: 15px;
+    padding-left: 0px;
 }
 .page-header {
     background-color: #ff9400;
@@ -25,8 +25,26 @@ body {
     color: #000000;
     text-decoration: none;
 }
+
+.page-header h2, .page-header h2 a, .page-header h2 a:visited, .page-header h2 a:active {
+    color: #ffffff;
+    font-size: 15pt;
+    text-decoration: none;
+
+}
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster';
+
+}
+h4 a {
+    color: #000;
+    font-family: 'Lobster';
+}
+
+h4 a:hover {
+    color: #777;
+    text-decoration: none;
+
 }
 
 .date {
@@ -46,12 +64,50 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    padding-top: 21px
 }
 
 .post {
     margin-bottom: 70px;
+
 }
 
 .post h1 a, .post h1 a:visited {
-    color: #000000;
+    color: #000;
+    text-decoration: none;
+}
+
+.post h1 a:hover {
+    color:#777;
+
+}
+
+
+.topmenu {
+     min-width: 1000px;
+     background: #EFECEC;
+     padding: 0 40px 0 40px;
+
+}
+
+.topmenu a {
+     color: #000;
+     text-decoration: none;
+}
+.topmenu a:hover {
+     color: #777;
+}
+
+.topmenu-item {
+     display: inline-block;
+     margin: 0 15px 0 15px;
+}
+.topmenu-item.last {
+     float: right;
+
+}
+
+.topmenu-item.disabled {
+    pointer-events: none; /* делаем ссылку некликабельной */
+    visibility: hidden;
 }

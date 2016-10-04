@@ -27,6 +27,21 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ACCOUNT_ACTIVATION_DAYS = 2 # кол-во дней для хранения кода активации
+
+# для отправки кода активации
+AUTH_USER_EMAIL_UNIQUE = True
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'info@google.ru'
+LOGIN_REDIRECT_URL = "/"
+
+FILE_CHARSET='utf-8'
+
+DEFAULT_CHARSET='utf-8'
 
 # Application definition
 
